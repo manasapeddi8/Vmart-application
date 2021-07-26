@@ -1,0 +1,68 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="js/add_products_cart.js"></script>
+</head>
+
+<body onload="displayCart()">
+    <header class="home">
+
+        <div class="title">
+            <h1 id="usernameCart">Hi, User name</h1>
+        </div>
+        <div class="cart">
+            <a href="#" onclick="OpenCart()"> <i class="fa fa-shopping-cart"></i></a>
+            <p id="cartsQuantity" style="margin-top: -48px; font-size: 25px;">0 </p>
+            <!-- <a onclick="OpenHome()"> <i class="fa fa-home"></i></a> -->
+        </div>
+    </header>
+
+    <div class="sidenav">
+        <div class="logo-home">
+            <img src="images/image.png" alt="logo" onclick="OpenHome()">
+        </div>
+        <button class="dropdown-btn">Home 
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container">
+            <a href="#">Mobile Phones</a>
+            <a href="#">Computers</a>
+            <a href="#">Books</a>
+        </div>
+        <a href="#orders">Orders</a>
+        <a href="#profile">Profile</a>
+        <a href="#logout">Logout</a>
+    </div>
+
+    <div class="main">
+        <div class="container-home">
+            <div class="rowcart">
+                <p id="cartt"></p>
+            </div>
+
+        </div>
+
+        <div class="detail">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script src="js/fetchProducts.js "></script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Vmart</title>
+</head>
+
+<body>
+    <header class="home">
+
+        <div class="title">
+            <h1 id="username">Hi, User name</h1>
+        </div>
+        <div class="cart">
+            <a href="#" onclick="OpenCart()"> <i class="fa fa-shopping-cart"></i></a>
+            <p id="cartsQuantity" style="margin-top: -48px; font-size: 25px;">0 </p>
+            <!-- <a onclick="OpenHome()"> <i class="fa fa-home"></i></a> -->
+        </div>
+    </header>
+
+    <div class="sidenav">
+        <div class="logo-home">
+            <img src="images/image.png" alt="logo" onclick="OpenHome()">
+        </div>
+        <button class="dropdown-btn">Home 
+    <i class="fa fa-caret-down"></i>
+  </button>
+        <div class="dropdown-container">
+            <a href="#">Mobile Phones</a>
+            <a href="#">Computers</a>
+            <a href="#">Books</a>
+        </div>
+        <a href="#orders" onclick="OpenCart()">Orders</a>
+        <a href="#profile">Profile</a>
+        <a href="#logout">Logout</a>
+    </div>
+
+    <div class="main">
+        <div class="container-home">
+            <div class="row">
+                <div class="column2">
+                    <img src="images/image.png" alt="img">
+
+                </div>
+                <div class="column3">
+
+                    <h3 id="product_name">Name: Product 1</h3>
+                    <h3>Price: 100</h3>
+                    <h3>Quantity: </h3>
+                    <input type="number" name="quantity" placeholder="1" min="0" max="100" value="1" id="qunatity"><br><br>
+                    <a href="#addtocart" class="cart-btn" onClick="addItem('images/logo.jpg','Name: Product 1',document.getElementById('qunatity').value,parseInt(document.getElementById('qunatity').value)*100)">Add to cart</a>
+                </div>
+
+            </div>
+            <p id="cartt"></p>
+            <div class="detail">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+<script src="js/script.js"></script>
+<script src="js/add_products_cart.js"></script>
